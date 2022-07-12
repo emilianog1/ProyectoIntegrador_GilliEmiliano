@@ -1,12 +1,13 @@
 img{
     width: 80px;
     border-radius: 15%;
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.781);
 }
 .row{
     padding: 20px;
 }
 div{
-    background-color: #1ce44e;
+    background-color: #30c977;
 }
 h1, h3{
     display: inline;
