@@ -9,8 +9,11 @@
                 <a href="https://www.instagram.com/emilianoge"><img src="../../../assets/instagram.png" id="instagram"></a>
                 <a href="https://www.facebook.com/emiliano.gilli.3"><img src="../../../assets/facebook.png" id="facebook"></a>
                 <a href="https://github.com/emilianog1"><img src="../../../assets/github.png" id="github"></a>
-                <button type="button" class="btn btn-outline-light"> INGRESO </button>
-            </div>
+                <!--<button type="button" class="btn btn-outline-light" (click)="login()">INGRESO</button>-->
+                <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+                <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+                
+        </div>
         </div>
     </div>
 </div>
