@@ -3,7 +3,7 @@ package com.porfolioeg.eg.Controller;
 import com.porfolioeg.eg.Dto.dtoExperiencia;
 import com.porfolioeg.eg.Entity.Experiencia;
 import com.porfolioeg.eg.Security.Controller.Mensaje;
-import com.porfolioeg.eg.Security.Service.SExperiencia;
+import com.porfolioeg.eg.Service.SExperiencia;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
