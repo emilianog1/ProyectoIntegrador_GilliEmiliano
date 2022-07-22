@@ -8,6 +8,8 @@ import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
+import { EditSkillComponent } from './componentes/skills/edit-skill.component';
+import { NewSkillComponent } from './componentes/skills/new-skill.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent}, //cuando sea vacio que routee al componente home
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'nuevopro', component: NewProyectoComponent}, 
   { path: 'editpro/:id', component: EditProyectoComponent},
   { path: 'nuevaedu', component: NewEducacionComponent}, 
-  { path: 'editedu/:id', component: EditEducacionComponent}
+  { path: 'editedu/:id', component: EditEducacionComponent},
+  { path: 'nuevaskill', component: NewSkillComponent}, 
+  { path: 'editskill/:id', component: EditSkillComponent}
 ];
 
 @NgModule({

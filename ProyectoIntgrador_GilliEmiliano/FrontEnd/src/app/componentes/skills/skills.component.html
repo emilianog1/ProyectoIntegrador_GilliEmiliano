@@ -1,5 +1,50 @@
 <div class="row">
     <h1>Hard & Soft Skills</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaskill" *ngIf="isLogged">
+            Nueva Skill
+        </button>
+    </div>
+
+    <!--<div class="col lg 1">
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Skill of ski">-->
+                    <div class="col-sm-3 col-md-3 col-lg-3" *ngFor="let Skill of ski">
+                        <circle-progress
+                            [percent]=Skill.porcentajeS
+                            [radius]="80"
+                            [showUnits]="false"
+                            [title]=Skill.nombreS
+                            [titleColor]="'grey'"
+                            [titleFontSize]="'2em'"
+                            [showSubtitle]="false"
+                            [outerStrokeWidth]="16"
+                            [innerStrokeWidth]="8"
+                            [outerStrokeColor]="'#78c000'"
+                            [innerStrokeColor]="'#c7e596'"
+                            [animation]="true"
+                            [animationDuration]="300">
+                        </circle-progress>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editskill/{{Skill.id}}">
+                                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Skill.id)">
+                                <i class="bi bi-trash-fill"></i> BORRAR</button>
+                        </td>
+                    </div>
+                <!--</tr>
+            </tbody>
+        </table>
+    </div>-->
+
+</div>
+<!--CODIGO DE LA MAQUETA AL INICIO DEL PROYECTO
+<div class="row">
+    <h1>Hard & Soft Skills</h1>
     <div class="col-sm-3 col-md-3 col-lg-3">
         <circle-progress
             [percent]="25"
@@ -69,3 +114,4 @@
         </circle-progress>
     </div>
 </div>
+-->
