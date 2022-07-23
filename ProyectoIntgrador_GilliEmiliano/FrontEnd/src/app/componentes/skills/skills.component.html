@@ -1,8 +1,8 @@
 <div class="row">
-    <h1>Hard & Soft Skills</h1>
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaskill" *ngIf="isLogged">
-            Nueva Skill
+    <div class="col-lg-12">
+    <h1>HW & SW Skills </h1>
+        <button title= "Nueva Skill" type="button" class="btn btn-primary" routerLink="/nuevaskill" *ngIf="isLogged">
+            <i class="bi bi-plus-lg"> </i>
         </button>
     </div>
 
@@ -28,13 +28,15 @@
                             [animationDuration]="300">
                         </circle-progress>
                         <td *ngIf="isLogged">
-                            <button class="btn btn-light" routerLink="/editskill/{{Skill.id}}">
-                                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                            <button title= "Editar skill" class="btn btn-light" routerLink="/editskill/{{Skill.id}}">
+                                <i class="bi bi-pencil-fill"></i></button>
+                            <button title= "Eliminar skill" class="btn btn-danger" (click)="delete(Skill.id)">
+                                <i class="bi bi-trash-fill"></i></button>
                         </td>
-                        <td *ngIf="isLogged">
-                            <button class="btn btn-danger" (click)="delete(Skill.id)">
-                                <i class="bi bi-trash-fill"></i> BORRAR</button>
-                        </td>
+                        <!--<td *ngIf="isLogged">
+                            <button title= "Eliminar skill" class="btn btn-danger" (click)="delete(Skill.id)">
+                                <i class="bi bi-trash-fill"></i> Eliminar</button>
+                        </td>-->
                     </div>
                 <!--</tr>
             </tbody>
