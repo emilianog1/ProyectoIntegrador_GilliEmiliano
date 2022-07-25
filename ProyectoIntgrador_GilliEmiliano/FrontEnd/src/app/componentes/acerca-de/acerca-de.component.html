@@ -1,15 +1,19 @@
 <div class="row">
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/perfil.PNG" class="img fluid" id="fotodeperfil">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" >
+        <!--aca iria la dir de base de datos de la foto-->
+        <img src="../../../assets/perfil.PNG" class="img fluid" id="fotodeperfil"> 
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <p id="nombre"> {{persona.nombre}} {{persona.apellido}}</p>
-        <p> Full Stack Developer Jr </p>
+        <p> {{persona.titulo}} </p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
+            <!--aca iria la dir de base de datos de la foto-->
             <h1>Acerca de Mi</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum impedit minima perferendis? Tenetur itaque, velit dolore quisquam at voluptatem obcaecati, hic illum tempora nemo eligendi enim animi praesentium ullam laboriosam!</p>
+            <p>{{persona.descripcion}}</p>
         </span>
+        <button *ngIf="isLogged" title= "Editar perfil" class="btn btn-light" routerLink="/editar/{{persona.id}}">
+            <i class="bi bi-pencil-fill"></i> </button>
     </div>
 </div>

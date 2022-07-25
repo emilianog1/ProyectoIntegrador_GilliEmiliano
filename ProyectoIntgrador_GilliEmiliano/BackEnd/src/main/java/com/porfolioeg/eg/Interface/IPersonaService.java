@@ -2,12 +2,14 @@ package com.porfolioeg.eg.Interface;
 
 import com.porfolioeg.eg.Entity.Persona;
 import java.util.List;
+import java.util.Optional;
 
 
 /**
  * @author Emiliano
  */
 public interface IPersonaService {
+    
     //traer una lista de personas
     public List<Persona> getPersona();
     
@@ -19,4 +21,8 @@ public interface IPersonaService {
     
     //buscar una persona por id
     public Persona findPersona(Long id);
+    
+    public Optional<Persona> getOne(Long id);
+    
+    public boolean existsById(Long id);
 }
