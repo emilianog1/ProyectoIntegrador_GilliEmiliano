@@ -2,7 +2,8 @@
     padding: 20px;
 }
 div{
-    background-color: #30c977;
+    /*background-color: #30c977;*/
+    background: #6c8cb6;
 }
 #nombre{
     font-weight: bold;

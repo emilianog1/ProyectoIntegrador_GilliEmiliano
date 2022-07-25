@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
@@ -11,6 +12,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class EditPersonaComponent implements OnInit {
   //pers: persona = null;
   pers: persona = new persona("","","","","");
+  public archivos: any = [];
 
   constructor(private sPersona: PersonaService, private activatedRouter: ActivatedRoute,
     private router: Router) { }
@@ -29,6 +31,9 @@ export class EditPersonaComponent implements OnInit {
   }
 
   onUpdate(): void{
+    const formularioDatos = new FormData();
+    formularioDatos.append('files', this.archivos)
+
     this.sPersona.getPersona().subscribe(data => {this.pers = data})
     const id = this.activatedRouter.snapshot.params['id'];
     this.sPersona.update(id, this.pers).subscribe(
@@ -39,5 +44,12 @@ export class EditPersonaComponent implements OnInit {
          this.router.navigate(['']);
       }
     )
+  }
+
+  capturarFile(event:any): any{
+    const archivoCapturado = event.target.files[0];
+    this.archivos.push(archivoCapturado);
+
+    //console.log(event.target.files);
   }
 }

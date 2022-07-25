@@ -1,6 +1,11 @@
 .row{
-    background-color: #30c977;
+    /*background-color: #30c977;*/
+    background: #6c8cb6;
     padding: 20px;
+}
+div{
+    /*background-color: #30c977;*/
+    background: #6c8cb6;
 }
 h1, h3{
     display: inline;
